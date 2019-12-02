@@ -27,31 +27,29 @@ namespace LancioDado
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            int da = 1;
-            int a = 7;
+            
             Random random = new Random();
-            int numeroCasuale = random.Next(da, a);
-            int numero = int.Parse(txtRandom.Text);
-            if (numero == numeroCasuale)
+            int numeroCasuale = random.Next(1, 7);
+            string numero = numeroCasuale.ToString();
+            int valore = int.Parse(txtNumero.Text);
+            if (valore == numeroCasuale)
             {
-                txtVinto.Text =  + " hai vinto!";
+                txtRandom.Text =  numero + " Congratulazioni hai vinto!";
             }
             else
             {
-               txtVinto.Text =  + "sarai più fortunato";
+               txtRandom.Text = numero +  " che sfortuna hai perso";
             }
-            if(numeroCasuale> 1||numeroCasuale<0)
+            if(valore< 1||valore>6)
             {
                 MessageBox.Show("Inserisci un numero da 1 a 6", "Numero non corretto", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
-
-        private void btn_Ritenta(object sender, RoutedEventArgs e)
+        private void btnRitenta_Click(object sender, RoutedEventArgs e)
         {
-            txtVinto.Clear();
             txtRandom.Clear();
+            txtNumero.Clear();
         }
-
     }
 }
 
@@ -59,6 +57,3 @@ namespace LancioDado
 
 
          
-        }
-    }
-}
