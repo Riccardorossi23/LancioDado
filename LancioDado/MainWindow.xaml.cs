@@ -34,11 +34,11 @@ namespace LancioDado
             int numero = int.Parse(txtRandom.Text);
             if (numero == numeroCasuale)
             {
-                txtVinto.Text = r + " Complimenti, hai vinto!";
+                txtVinto.Text =  + " hai vinto!";
             }
             else
             {
-               txtVinto.Text = r + "  Ritenta, sarai più fortunato";
+               txtVinto.Text =  + "sarai più fortunato";
             }
             if(numeroCasuale> 1||numeroCasuale<0)
             {
