@@ -38,7 +38,7 @@ namespace LancioDado
             }
             else
             {
-               txtVinto.Text = r + " Ritenta, sarai più fortunato";
+               txtVinto.Text = r + "  Ritenta, sarai più fortunato";
             }
             if(numeroCasuale> 1||numeroCasuale<0)
             {
