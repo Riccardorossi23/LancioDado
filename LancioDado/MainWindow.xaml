@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="450">
     <Grid >
-        <Button x:Name="btnRandom" Content="random" HorizontalAlignment="Left" Height="45" Margin="296,95,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click" RenderTransformOrigin="0.4,-1.085"/>
-        <Button x:Name="btnRitenta" Content="ritenta" HorizontalAlignment="Left" Height="42" Margin="190,278,0,0" VerticalAlignment="Top" Width="88" Click="btnRitenta_Click"/>
-        <TextBox x:Name="txtRandom" IsReadOnly="True" HorizontalAlignment="Left" Height="38" Margin="143,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="182"/>
-        <TextBox x:Name="txtNumero" HorizontalAlignment="Left" Height="26" Margin="90,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnRandom" Content="random" HorizontalAlignment="Left" Height="45" Margin="358,94,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click" RenderTransformOrigin="0.4,-1.085"/>
+        <Button x:Name="btnRitenta" Content="ritenta" HorizontalAlignment="Left" Height="42" Margin="168,318,0,0" VerticalAlignment="Top" Width="88" Click="btnRitenta_Click"/>
+        <TextBox x:Name="txtRandom" IsReadOnly="True" HorizontalAlignment="Left" Height="38" Margin="130,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="182"/>
+        <TextBox x:Name="txtNumero" HorizontalAlignment="Left" Height="26" Margin="168,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Lancio dadi" FontSize=" 20" HorizontalAlignment="Left" Height="44" Margin="170,10,0,0" VerticalAlignment="Top" Width="183" RenderTransformOrigin="0.247,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -21,8 +21,12 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="inserici numero tra 1 e 6" HorizontalAlignment="Left" Height="32" Margin="66,77,0,0" VerticalAlignment="Top" Width="144"/>
-        <Label Content="Clicca random e spera nella fortuna!" HorizontalAlignment="Left" Height="26" Margin="143,164,0,0" VerticalAlignment="Top" Width="205"/>
+        <Label Content="inserici numero tra 1 e 6" HorizontalAlignment="Left" Height="32" Margin="168,58,0,0" VerticalAlignment="Top" Width="144"/>
+        <Label Content="Clicca random e spera nella fortuna!" HorizontalAlignment="Left" Height="26" Margin="128,145,0,0" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="txtPuntata" HorizontalAlignment="Left" Height="26" Margin="22,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Quanto vuoi puntare?" HorizontalAlignment="Left" Height="32" Margin="10,58,0,0" VerticalAlignment="Top" Width="128"/>
+        <TextBox x:Name="txtRisultato"  HorizontalAlignment="Left" Height="32" Margin="130,281,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="198"/>
+        <Label Content="Scopri se hai vinto?" HorizontalAlignment="Left" Height="24" Margin="130,230,0,0" VerticalAlignment="Top" Width="182"/>
 
 
     </Grid>

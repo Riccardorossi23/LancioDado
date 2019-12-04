@@ -31,15 +31,29 @@ namespace LancioDado
             Random random = new Random();
             int numeroCasuale = random.Next(1, 7);
             string numero = numeroCasuale.ToString();
+            double puntata = double.Parse(txtPuntata.Text);
             int valore = int.Parse(txtNumero.Text);
             if (valore == numeroCasuale)
             {
-                txtRandom.Text =  numero + " Congratulazioni hai vinto!";
+                double risultato = puntata * 3;
+                txtRisultato.Text = risultato.ToString();
+                txtRandom.Text = numero + " Congratulazioni hai vinto!";
+
             }
             else
             {
-               txtRandom.Text = numero +  " che sfortuna hai perso";
+                double risultato = puntata - puntata;
+                txtRisultato.Text = risultato.ToString();
+                txtRandom.Text = numero + " che sfortuna hai perso";
+                if (puntata == 0)
+                {
+                    MessageBox.Show("GAME OVER");
+                    Image source=
+                }
+                MessageBox.Show("GAME OVER");
+
             }
+   
             if(valore< 1||valore>6)
             {
                 MessageBox.Show("Inserisci un numero da 1 a 6", "Numero non corretto", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -49,6 +63,7 @@ namespace LancioDado
         {
             txtRandom.Clear();
             txtNumero.Clear();
+        
         }
     }
 }
