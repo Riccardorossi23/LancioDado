@@ -35,22 +35,13 @@ namespace LancioDado
             int valore = int.Parse(txtNumero.Text);
             if (valore == numeroCasuale)
             {
-                double risultato = puntata * 3;
-                txtRisultato.Text = risultato.ToString();
                 txtRandom.Text = numero + " Congratulazioni hai vinto!";
-
             }
             else
             {
-                double risultato = puntata - puntata;
-                txtRisultato.Text = risultato.ToString();
+               
                 txtRandom.Text = numero + " che sfortuna hai perso";
-                if (puntata == 0)
-                {
-                    MessageBox.Show("GAME OVER");
-                    Image source=
-                }
-                MessageBox.Show("GAME OVER");
+            
 
             }
    
@@ -58,12 +49,35 @@ namespace LancioDado
             {
                 MessageBox.Show("Inserisci un numero da 1 a 6", "Numero non corretto", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+            if (valore == numeroCasuale)
+            {
+                double risultato = puntata * 3;
+                txtRisultato.Text = risultato.ToString();
+            }
+            else if (puntata == 0)
+            {
+                MessageBox.Show("NON PUNTARE");
+            }
+            else
+            {
+
+                double risultato = puntata - puntata;
+                txtRisultato.Text = risultato.ToString();
+                MessageBox.Show("GAME OVER");
+            }
         }
         private void btnRitenta_Click(object sender, RoutedEventArgs e)
         {
             txtRandom.Clear();
             txtNumero.Clear();
-        
+            txtPuntata.Clear();
+            txtRisultato.Clear();
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
